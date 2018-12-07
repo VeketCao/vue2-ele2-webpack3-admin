@@ -13,7 +13,7 @@ const libDir = path.resolve(srcDir, 'js/lib');
 const glob = require('glob');
 const CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;
 const OpenBrowserPlugin = require('open-browser-webpack-plugin');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+//const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 /**考虑多页面应用，多个入口文件**/
 const _entries = {};
@@ -91,7 +91,7 @@ module.exports = (() => {
                 allChunks: true
             }),
             new webpack.ProvidePlugin({'_': "underscore",'Vue':'vue','AppUtil':'apputil',}),
-            new BundleAnalyzerPlugin({ openAnalyzer: false }),
+            /*new BundleAnalyzerPlugin({ openAnalyzer: false }),*/
             new OpenBrowserPlugin({url:'http://localhost:5000/admin.html'})
         ].concat(htmlPlugins()),
         module:{
