@@ -2,10 +2,10 @@
  * Created by Veket on 2018/12/7.
  */
 import '../../css/base'
-/*import App from '../pages/App/main.vue'
-import router from '../pages/Route/main.js'
-import El from '../lib/el/index.js'
-import Lang from '../lang/main.js'
+import App from '../admin/App/main'
+import router from '../admin/Route/main'
+import El from '../lib/el/index'
+import Lang from '../lang/main'
 
 El.initElement()
 Lang.initLang()
@@ -21,5 +21,4 @@ if (__PROD__) {
 } else {
   Vue.config.devtools = true
   console.log('[开发环境]')
-}*/
-console.log('admin...');
+}
