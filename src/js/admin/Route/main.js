@@ -6,6 +6,7 @@ import VueRouter from 'vue-router';
 import Main from '../Main/main'
 import Home from '../Main/Home/main'
 import Login from '../Login/main';
+import Form from '../Main/Form/main';
 
 Vue.use(VueRouter);
 
@@ -28,6 +29,11 @@ const routesMap = [
                 path: '/m/home',
                 name: 'home',
                 component: Home
+            },
+            {
+                path: '/m/form',
+                name: 'form',
+                component: Form
             }
         ]
     },

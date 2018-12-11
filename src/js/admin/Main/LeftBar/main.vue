@@ -1,23 +1,15 @@
 <template>
     <div class="left_bar">
         <ul class="menu_bar">
-            <li class="li_item">
-                <a class="a_item">
-                   <span>首页</span>
-                </a>
-            </li>
-            <li class="li_item">
-                <a class="a_item">
-                    <span>测试</span>
-                </a>
-            </li>
+            <li class="li_item"><router-link to="/m/home" ><span>首页</span></router-link></li>
+            <li class="li_item"><router-link to="/m/form" ><span>表单</span></router-link></li>
         </ul>
     </div>
 </template>
 
 <script>
     export default {
-        name: "LeftBar"
+        name: "LeftBar",
     }
 </script>
 
@@ -30,15 +22,23 @@
             border: none;
             width: 100%;
             height: 100%;
+            .router-link-active {
+                background: rgba(106,121,172,0.5);
+            }
             .li_item{
-                padding:0px 10px;
-                .a_item{
-                    padding:20px 50px;
-                    line-height: 60px;
+                cursor:pointer;
+                transition:all .3s;
+                &>a{
+                    padding:15px 60px;
+                    display: inline-block;
+                    width: 180px;
                 }
-                .a_item span{
+                &>a span{
                     color: #fff;
                     font-size: 16px;
+                }
+                &:hover {
+                    background: rgba(106,121,172,0.5);
                 }
             }
         }

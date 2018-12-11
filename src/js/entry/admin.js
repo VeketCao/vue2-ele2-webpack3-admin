@@ -4,7 +4,7 @@
 import '../../css/base'
 import App from '../admin/App/main'
 import router from '../admin/Route/main'
-import El from '../lib/el/index'
+import El from '../lib/el/main'
 import Lang from '../lang/main'
 
 El.initElement()

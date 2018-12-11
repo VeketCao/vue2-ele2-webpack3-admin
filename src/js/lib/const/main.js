@@ -8,5 +8,5 @@ export default {
     LANGS:{
         'zh-cn':'中文简体',
         'en':'ENGLISH'
-    }
+    },
 }
