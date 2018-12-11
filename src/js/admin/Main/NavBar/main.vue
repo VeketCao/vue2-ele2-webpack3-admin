@@ -32,25 +32,25 @@
     import LangSelect from '@/components/LangSelect/main'
 
     export default {
-        name: "NavBar",
-        data(){
-            return{
-                opened:true
-            }
-        },
-        methods:{
-            toggleLeftBar() {//改变左侧栏宽度
-                this.opened = !this.opened;
-                Bus.$emit('toggleLeftBarMsg', this.opened);
-            },
-            logout() {
-                this.$router.push('/login');
-            }
-        },
-        components:{
-            hamburger:Hamburger,
-            'lang-select':LangSelect
+      name: 'NavBar',
+      data(){
+        return{
+            opened:true
         }
+      },
+      methods:{
+        toggleLeftBar() {//改变左侧栏宽度
+            this.opened = !this.opened;
+            Bus.$emit('toggleLeftBarMsg', this.opened);
+        },
+        logout() {
+            this.$router.push('/login');
+        }
+      },
+      components:{
+        hamburger:Hamburger,
+        'lang-select':LangSelect
+      }
     }
 </script>
 

@@ -12,7 +12,7 @@
 </template>
 
 <script>
-export default {
+  export default {
     data(){
       return{
           lang:'zh-cn'
@@ -28,7 +28,7 @@ export default {
             })*/
         }
     }
-}
+  }
 </script>
 
 <style scoped>
