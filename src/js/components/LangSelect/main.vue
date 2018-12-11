@@ -4,28 +4,30 @@
       <svg-icon class-name="international-icon" icon-class="language" />
     </div>
     <el-dropdown-menu slot="dropdown">
-      <el-dropdown-item :disabled="language==='zh-cn'" command="zh-cn">中文</el-dropdown-item>
-      <el-dropdown-item :disabled="language==='en'" command="en">English</el-dropdown-item>
+      <el-dropdown-item :disabled="lang==='zh-cn'" command="zh-cn">中文</el-dropdown-item>
+      <el-dropdown-item :disabled="lang==='en'" command="en">English</el-dropdown-item>
+        <el-dropdown-item :disabled="lang==='ja'" command="ja">日本語</el-dropdown-item>
     </el-dropdown-menu>
   </el-dropdown>
 </template>
 
 <script>
 export default {
-  computed: {
-    language() {
-      return 'zh-cn'
+    data(){
+      return{
+          lang:'zh-cn'
+      }
+    },
+    methods: {
+        handleSetLanguage(lg) {
+            this.lang = lg;
+            Vue.config.lang = lg;
+            /*this.$message({
+              message: 'Switch Language Success',
+              type: 'success'
+            })*/
+        }
     }
-  },
-  methods: {
-    handleSetLanguage(lang) {
-        Vue.config.lang = lang;
-        this.$message({
-          message: 'Switch Language Success',
-          type: 'success'
-        })
-    }
-  }
 }
 </script>
 

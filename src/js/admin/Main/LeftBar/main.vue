@@ -1,8 +1,8 @@
 <template>
     <div class="left_bar">
         <ul class="menu_bar">
-            <li class="li_item"><router-link to="/m/home" ><span>首页</span></router-link></li>
-            <li class="li_item"><router-link to="/m/form" ><span>表单</span></router-link></li>
+            <li class="li_item"><router-link to="/m/home" ><span>{{$t(`menus.home`)}}</span></router-link></li>
+            <li class="li_item"><router-link to="/m/form" ><span>{{$t(`menus.form`)}}</span></router-link></li>
         </ul>
     </div>
 </template>
@@ -29,7 +29,7 @@
                 cursor:pointer;
                 transition:all .3s;
                 &>a{
-                    padding:15px 60px;
+                    padding:15px 50px;
                     display: inline-block;
                     width: 180px;
                 }
