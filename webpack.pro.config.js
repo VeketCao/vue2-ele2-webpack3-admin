@@ -151,7 +151,16 @@ module.exports = (() => {
                     })
                 },
                 {
+                    test: /\.svg$/,
+                    loader: 'svg-sprite-loader',
+                    include: [path.resolve(__dirname,'src/js/icons')],
+                    options: {
+                        symbolId: 'icon-[name]'
+                    }
+                },
+                {
                     test: /\.(png|jpg|jpeg|gif|svg)(\?.*)?$/,
+                    exclude: [path.resolve(__dirname,'src/js/icons')],
                     use:[{
                         loader:'url-loader',
                         options:{
