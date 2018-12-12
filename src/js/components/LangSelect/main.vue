@@ -4,28 +4,31 @@
       <svg-icon class-name="international-icon" icon-class="language" />
     </div>
     <el-dropdown-menu slot="dropdown">
-      <el-dropdown-item :disabled="lang==='zh-cn'" command="zh-cn">中文</el-dropdown-item>
-      <el-dropdown-item :disabled="lang==='en'" command="en">English</el-dropdown-item>
-        <el-dropdown-item :disabled="lang==='ja'" command="ja">日本語</el-dropdown-item>
+      <el-dropdown-item :disabled="language==='zh'" command="zh">中文</el-dropdown-item>
+      <el-dropdown-item :disabled="language==='en'" command="en">English</el-dropdown-item>
+        <el-dropdown-item :disabled="language==='ja'" command="ja">日本語</el-dropdown-item>
     </el-dropdown-menu>
   </el-dropdown>
 </template>
 
 <script>
+  import CST from '@/lib/const/main';
+
   export default {
-    data(){
-      return{
-          lang:'zh-cn'
-      }
-    },
+      data(){
+          return{
+              language:localStorage.getItem(CST.LANG) ||'zh'
+          }
+      },
     methods: {
         handleSetLanguage(lg) {
-            this.lang = lg;
-            Vue.config.lang = lg;
-            /*this.$message({
+            this.language = lg;
+            this.$i18n.locale = lg
+            localStorage.setItem(CST.LANG,lg);
+            this.$message({
               message: 'Switch Language Success',
               type: 'success'
-            })*/
+            })
         }
     }
   }

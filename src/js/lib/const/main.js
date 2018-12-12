@@ -6,7 +6,7 @@
 export default {
     LANG:'lang',
     LANGS:{
-        'zh-cn':'中文简体',
+        'zh':'中文简体',
         'en':'ENGLISH'
     },
 }

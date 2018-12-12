@@ -8,7 +8,10 @@ global.Vue = window.Vue = Vue;
 global.Bus = window.Bus = new Vue();
 
 export default {
-  initElement(){
-    Vue.use(ElementUI);
+  initElement(i18n){
+    Vue.use(ElementUI,{
+      size:'medium',
+      i18n:(key,value) => i18n.t(key, value)
+    });
   }
 }
