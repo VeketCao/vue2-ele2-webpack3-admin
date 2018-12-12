@@ -8,8 +8,11 @@ import El from '../lib/el/main'
 import i18n from '../lang/main'
 import '@/icons/main' // icon
 
-El.initElement(i18n)
+/********mock*********************/
+//import Mock from '../mock/main';
+/**********************************/
 
+El.initElement(i18n)
 new Vue({
     el:'#app',
     i18n,
