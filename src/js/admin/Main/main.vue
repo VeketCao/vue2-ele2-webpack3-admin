@@ -71,6 +71,7 @@
         transition: margin-left .28s;
         margin-left: 180px;
         position: relative;
+        overflow-y: hidden;
     }
     .main_container_max{
         min-height: 100%;
@@ -78,6 +79,7 @@
         transition: margin-left .28s;
         margin-left: 5px;
         position: relative;
+        overflow-y: hidden;
     }
     .nav_bar_container{
         height: 51px;

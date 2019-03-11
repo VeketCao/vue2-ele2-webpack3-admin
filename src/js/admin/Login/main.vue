@@ -33,10 +33,8 @@
             handleLogin(){
                 loginApi.login('admin','123456').then(function(rtn){
                     console.log('loginApi',rtn)
-                    if(rtn.data.status==='success'){
-                        window.location.href = './admin.html#/m/home'
-                    }
                 })
+                window.location.href = './admin.html#/m/home'
             }
         }
     }
