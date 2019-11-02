@@ -60,7 +60,7 @@
     "vue-style-loader": "^3.0.3",
     "vue-template-compiler": "^2.4.4",
     "webpack": "^3.6.0",
-    "webpack-bundle-analyzer": "^2.9.1",
+    "webpack-bundle-analyzer": "^3.6.0",
     "webpack-dev-server": "^2.8.2"
   }
 }
