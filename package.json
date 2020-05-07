@@ -6,6 +6,7 @@
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --config webpack.dev.config.js --progress --colors --inline",
     "prod": "cross-env NODE_ENV=production webpack --config webpack.pro.config.js --progress --colors",
+    "pkg": "node webpack.pkg.config.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint --ext .js,.vue src"
   },
